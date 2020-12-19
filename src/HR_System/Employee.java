@@ -19,33 +19,25 @@ public class Employee {
   }
 
   public String getFirstName(){
-      return firstName;
+    return firstName;
   }
   
   public String getLastName(){
-      return lastName;
+    return lastName;
   }
 
   public String getAddress(){
-      return homeAddress;
+    return homeAddress;
   }
   
   public String getMedical(){
-      return medicalInfo;
+    return medicalInfo;
   }
 
   public int getSalary(){
-      return salary;
+    return salary;
   }
   
-  public String toString(){
-    System.out.println("--------------------------------------");
-    System.out.println("First Name: " + firstName);
-    System.out.println("Last Name: " + lastName);
-    System.out.println("Home Address: " + homeAddress);
-    System.out.println("Medical Information: " + medicalInfo);
-    System.out.println("Salary: $" + salary);
-    return "--------------------------------------";
-  }
+
 
 }
