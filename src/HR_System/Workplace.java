@@ -22,14 +22,14 @@ public class Workplace {
     while (choice.equals("1") || choice.equals("3") || choice.equals("3")) {
 
       if (choice.equals("1")) {
-        Developer nick;
-        nick = new Developer("Nick", "Lee", "123 Star Street", "n/a", 90000, 90);
-        System.out.println(nick);
-
+        CEO Bob;
+        Bob = new CEO("Bob", "Lee", "123 Star Street", "n/a", 90000);
+        System.out.println(Bob);
+        
         System.out.println("Please choose again");
 		    choice = keyboard.readLine();
       }
-      
+
       if (choice.equals("2")) {
         Manager Dave;
         Dave = new Manager("Dave", "Lee", "123 Star Street", "n/a", 90000, "Music App");
@@ -39,9 +39,17 @@ public class Workplace {
 		    choice = keyboard.readLine();
       }
 
+      if (choice.equals("3")) {
+        Developer nick;
+        nick = new Developer("Nick", "Lee", "123 Star Street", "n/a", 90000, 90);
+        System.out.println(nick);
+
+        System.out.println("Please choose again");
+		    choice = keyboard.readLine();
+      }
+
+
     }
-
-
 
   }
 
