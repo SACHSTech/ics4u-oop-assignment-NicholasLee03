@@ -6,15 +6,21 @@ public class Manager extends Employee {
 
   private String currentProject;
   private static int totalPayroll = 0;
+  private static int totalDevelopers = 0;
 
   public Manager(String fname, String lname, String address, String med, int sal, String project){
     super(fname, lname, address, med, sal);
     currentProject = project;
     totalPayroll = totalPayroll + sal;
+    totalDevelopers++;
   }
 
   public static int getTotalPayroll(){
     return totalPayroll;
+  }
+
+  public static int getTotalDevelopers(){
+    return totalDevelopers;
   }
 
   public String toString(){
