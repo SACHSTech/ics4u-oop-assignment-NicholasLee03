@@ -4,8 +4,18 @@ import HR_System.*;
 
 public class CEO extends Employee {
 
-  public CEO(String fname, String lname, String address, String med, int sal){
+  private int bonusPay;
+  private static int totalPayroll = 0;
+
+  public CEO(String fname, String lname, String address, String med, int sal, int bonus){
     super(fname, lname, address, med, sal);
+    bonusPay = bonus;
+
+    totalPayroll = sal + bonus;
+  }
+
+  public static int getTotalPayroll(){
+    return totalPayroll;
   }
 
   public String toString(){
@@ -16,6 +26,7 @@ public class CEO extends Employee {
     System.out.println("Home Address: " + getAddress());
     System.out.println("Medical Information: " + getMedical());
     System.out.println("Salary: $" + getSalary());
+    System.out.println("Bonus: $" + bonusPay);
     return "--------------------------------------";
   }
 

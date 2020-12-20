@@ -21,7 +21,8 @@ public class Workplace {
     password = keyboard.readLine();
 
     if (username.equalsIgnoreCase("Eric") && password.equalsIgnoreCase("Fabroa")) {
-      System.out.println("\nSelect one of the options: ");
+      System.out.println("\nSelect one of the options below: ");
+      System.out.println("Please only view each option once and select the HR Report once you have viewed all the other options");
       System.out.println("1 - CEO");
       System.out.println("2 - Software Development Managers");
       System.out.println("3 - Software Developers");
@@ -37,7 +38,7 @@ public class Workplace {
 
       if (choice.equals("1")) {
         CEO Daenerys;
-        Daenerys = new CEO("Daenerys", "Targaryen", "34 Iron Throne Rd.", "Peanut Allergy", 5000000);
+        Daenerys = new CEO("Daenerys", "Targaryen", "34 Iron Throne Rd.", "Peanut Allergy", 5000000, 9000);
         System.out.println(Daenerys);
         
         System.out.println("\nSelect one of the options again or enter exit");
@@ -48,6 +49,10 @@ public class Workplace {
         Manager Jon;
         Jon = new Manager("Jon", "Snow", "23 The Wall Rd.", "Asthma", 150000, "Music App");
         System.out.println(Jon);
+
+        Manager Jon1;
+        Jon1 = new Manager("Jon", "Snow", "23 The Wall Rd.", "Asthma", 150000, "Music App");
+        System.out.println(Jon1);
         
         System.out.println("\nSelect one of the options again or enter exit");
 		    choice = keyboard.readLine();
@@ -80,8 +85,12 @@ public class Workplace {
       } 
 
       if (choice.equals("4")) {
-        System.out.println("Total Number of Developers: " + Developer.getTotalDevelopers());
-        System.out.println("Total Payroll: $" + Developer.getTotalPayroll());
+        System.out.println("Total Number of CEOs: 1");
+        System.out.println("Total Number of Software Development Managers: 2");
+        System.out.println("Total Number of Software Developers: " + Developer.getTotalDevelopers());
+        System.out.println("Total Payroll for CEO: $" + CEO.getTotalPayroll());
+        System.out.println("Total Payroll for Software Development Managers: $" + Manager.getTotalPayroll());
+        System.out.println("Total Payroll for Software Developers Developers: $" + Developer.getTotalPayroll());
       }
 
 
