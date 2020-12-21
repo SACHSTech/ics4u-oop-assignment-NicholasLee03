@@ -5,22 +5,22 @@ import HR_System.*;
 public class Manager extends Employee {
 
   private String currentProject;
-  private static int totalPayroll = 0;
-  private static int totalDevelopers = 0;
+  private static int managerPayroll = 0;
+  private static int totalManagers = 0;
 
   public Manager(String fname, String lname, String address, String med, int sal, String project){
     super(fname, lname, address, med, sal);
     currentProject = project;
-    totalPayroll = totalPayroll + sal;
-    totalDevelopers++;
+    managerPayroll = managerPayroll + sal;
+    totalManagers++;
   }
 
-  public static int getTotalPayroll(){
-    return totalPayroll;
+  public static int getManagerPayroll(){
+    return managerPayroll;
   }
 
-  public static int getTotalDevelopers(){
-    return totalDevelopers;
+  public static int getTotalManagers(){
+    return totalManagers;
   }
 
   public String toString(){

@@ -7,10 +7,19 @@ public class Workplace {
 
   public static void main(String[] args) throws IOException{
 
+    CEO SpongeBob;
+    Manager Patrick;
+    Manager Squidward;
+    Developer Sandy;
+    Developer Eugene;
+    Developer newDev;
+
     String choice = "0";
     String username;
     String password;
     int totalPayroll;
+    int bonus;
+
 		BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
     System.out.println(" ");
@@ -33,43 +42,37 @@ public class Workplace {
       System.out.println("\nPlease enter the secure passcode to access the CEO HR information (Level 1)");
 
       choice = keyboard.readLine();
-    } else {
+    } else if (!username.equalsIgnoreCase("Eric") && !password.equalsIgnoreCase("Fabroa")) {
       System.out.println("Incorrect Username/Password. Please try again later.");
+      choice = "";
     }
 
     if (choice.equals("11001")) {
+      System.out.print("Enter the bonus amount for the CEO: ");
+      bonus = Integer.parseInt(keyboard.readLine());
 
-      CEO SpongeBob;
-      SpongeBob = new CEO("SpongeBob", "SquarePants", "34 Pineapple Rd.", "Peanut Allergy", 5000000, 9000);
+      SpongeBob = new CEO("SpongeBob", "SquarePants", "34 Pineapple Rd.", "Peanut Allergy", 5000000, bonus);
       System.out.println(SpongeBob);
       
       System.out.println("\nPlease enter the secure passcode to access the Software Development Manager HR information (Level 2)");
       choice = keyboard.readLine();
-    } else {
-      System.out.println("\nIncorrect passcode. You must exit and try again");    
-    }
+    } 
 
     if (choice.equals("11002")) {
-      Manager Patrick;
       Patrick = new Manager("Patrick", "Star", "23 Rock Rd.", "Asthma", 150000, "Meditation App");
       System.out.println(Patrick);
 
-      Manager Squidward;
       Squidward = new Manager("Squidward", "Tentacles", "9 Octopus Cres.", "Dog Allergy", 150000, "Music App");
       System.out.println(Squidward);
       
       System.out.println("\nPlease enter the secure passcode to access the Software Developer HR information (Level 3)");
       choice = keyboard.readLine();
-    } else {
-      System.out.println("\nIncorrect passcode. You must exit and try again");    
-    }
+    } 
 
     if (choice.equals("11003")) {
-      Developer Sandy;
       Sandy = new Developer("Sandy", "Cheeks", "59 Karate Ave.", "n/a", 70000, 90);
       System.out.println(Sandy);
 
-      Developer Eugene;
       Eugene = new Developer("Eugene", "Krabs", "75 Krusty Krab Rd.", "Shellfish Allergy", 70000, 88);
       System.out.println(Eugene);
 
@@ -77,7 +80,6 @@ public class Workplace {
       String addDev = keyboard.readLine();
 
       if (addDev.equalsIgnoreCase("yes")) {
-        Developer newDev;
         System.out.print("First Name: ");
         String fName = keyboard.readLine();
         System.out.print("Last Name: ");
@@ -90,31 +92,27 @@ public class Workplace {
         System.out.println(newDev);
       }
 
-      System.out.println("\nPlease enter the secure passcode to access the HR Report  (Level 4)");
+      System.out.println("\nPlease enter the secure passcode to access the HR Report (Level 4)");
       choice = keyboard.readLine();
-    } else {
-      System.out.println("\nIncorrect passcode. You must exit and try again");    
     } 
 
     if (choice.equals("11004")) {
       System.out.println("\nBelow is the HR Overall Company Report");
 
       System.out.println("Total Number of CEOs: 1");
-      System.out.println("Total Number of Software Development Managers: " + Manager.getTotalDevelopers());
+      System.out.println("Total Number of Software Development Managers: " + Manager.getTotalManagers());
       System.out.println("Total Number of Software Developers: " + Developer.getTotalDevelopers());
 
-      System.out.println("\nTotal Payroll for CEO: $" + CEO.getTotalPayroll());
-      System.out.println("Total Payroll for Software Development Managers: $" + Manager.getTotalPayroll());
-      System.out.println("Total Payroll for Software Developers Developers: $" + Developer.getTotalPayroll());
+      System.out.println("\nTotal Payroll for CEO: $" + CEO.getCEOPayroll());
+      System.out.println("Total Payroll for Software Development Managers: $" + Manager.getManagerPayroll());
+      System.out.println("Total Payroll for Software Developers Developers: $" + Developer.getDevPayroll());
 
-      totalPayroll = CEO.getTotalPayroll() + Manager.getTotalPayroll() + Developer.getTotalPayroll();
+      totalPayroll = CEO.getCEOPayroll() + Manager.getManagerPayroll() + Developer.getDevPayroll();
       System.out.println("Total Payroll: $" + totalPayroll);
 
-    } else {
+    } else if (!choice.equals("11004") && !choice.equals("")) {
       System.out.println("\nIncorrect passcode. You must exit and try again");    
     }
-
-
 
   }
 

@@ -5,17 +5,17 @@ import HR_System.*;
 public class CEO extends Employee {
 
   private int bonusPay;
-  private static int totalPayroll = 0;
+  private static int ceoPayroll = 0;
 
   public CEO(String fname, String lname, String address, String med, int sal, int bonus){
     super(fname, lname, address, med, sal);
     bonusPay = bonus;
 
-    totalPayroll = sal + bonus;
+    ceoPayroll = sal + bonus;
   }
 
-  public static int getTotalPayroll(){
-    return totalPayroll;
+  public static int getCEOPayroll(){
+    return ceoPayroll;
   }
 
   public String toString(){
