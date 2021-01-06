@@ -4,7 +4,7 @@
 
 *Insert Class Diagram here*  
 
-![Image of Class Diagram](https://github.com/SACHSTech/ics4u-oop-assignment-NicholasLee03/blob/main/OOP%20Class%20Diagram.png)
+![Image of Class Diagram](https://github.com/SACHSTech/ics4u-oop-assignment-NicholasLee03/blob/main/OOPClassDiagram.png)
 
 
 ## Summary
