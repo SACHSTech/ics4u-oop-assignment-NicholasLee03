@@ -3,6 +3,12 @@ package HR_System;
 import java.io.*;
 import HR_System.*;
 
+/**
+* A program that allows the user to view and enter information pertaining to HR information for different employees. 
+* The program displays the hierarchy of staff at a software development company with a CEO, Managers, and Developers.
+* @author: N. Lee 
+* 
+*/
 public class Workplace {
 
   public static void main(String[] args) throws IOException{
