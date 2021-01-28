@@ -7,10 +7,6 @@ public class Developer extends Employee {
   // Instance variable
   private int hours;
 
-  // Class variables
-  private static int totalDevelopers = 0;
-  private static int devPayroll = 0;
-
   /**
     * Constructor - creates a new Developer instance
     * @param fname - the Developer's first name
@@ -21,31 +17,17 @@ public class Developer extends Employee {
     * @param theHours - the Developer's hours
     */
   public Developer(String fname, String lname, String address, String med, int sal, int theHours){
-
     // Triggers a parent constructor in Employee class
     super(fname, lname, address, med, sal);
     hours = theHours;
-
-    // Tracks the number of developers and calculates the total payroll for the developers
-    totalDevelopers++;
-    devPayroll = devPayroll + sal;
-    
   }
 
   /**
-  * Getter method for total number of developers
-  * @return total number of developers
+  * Getter method for developer's hours
+  * @return developer's hours
   */
-  public static int getTotalDevelopers(){
-    return totalDevelopers;
-  }
-
-  /**
-  * Getter method for Developer's payroll
-  * @return Developer's payroll
-  */
-  public static int getDevPayroll(){
-    return devPayroll;
+  public int getHours(){
+    return hours;
   }
 
   /**

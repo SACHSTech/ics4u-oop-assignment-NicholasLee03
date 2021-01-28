@@ -23,13 +23,11 @@ public class Employee {
     * @param sal - the employee's salary
     */
   public Employee(String fname, String lname, String address, String med, int sal){
-
     firstName = fname;
     lastName = lname;
     homeAddress = address;
     medicalInfo = med;
     salary = sal;
-    
   }
 
   /**

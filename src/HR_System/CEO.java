@@ -20,14 +20,12 @@ public class CEO extends Employee {
     * @param bonus - the CEO's bonus
     */
   public CEO(String fname, String lname, String address, String med, int sal, int bonus){
-
     // Triggers a parent constructor in Employee class
     super(fname, lname, address, med, sal);
     bonusPay = bonus;
 
     // Calculates the total payroll for the CEO
     ceoPayroll = sal + bonus;
-
   }
 
   /**
@@ -36,6 +34,14 @@ public class CEO extends Employee {
   */
   public static int getCEOPayroll(){
     return ceoPayroll;
+  }
+
+  /**
+  * Getter method for CEO's bonus
+  * @return CEO's bonus
+  */
+  public int getCEOBonus(){
+    return bonusPay;
   }
 
   /**

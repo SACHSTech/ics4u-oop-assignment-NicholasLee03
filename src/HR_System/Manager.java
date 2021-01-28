@@ -1,15 +1,12 @@
 package HR_System;
 
 import HR_System.*;
+import java.util.ArrayList;
 
 public class Manager extends Employee {
 
   // Instance variable
   private String currentProject;
-
-  // Class variables
-  private static int managerPayroll = 0;
-  private static int totalManagers = 0;
 
   /**
     * Constructor - creates a new Manager instance
@@ -21,30 +18,17 @@ public class Manager extends Employee {
     * @param project - the Manager's project
     */
   public Manager(String fname, String lname, String address, String med, int sal, String project){
-    
     // Triggers a parent constructor in Employee class
     super(fname, lname, address, med, sal);
     currentProject = project;
-
-    // Calculates the payroll for all the managers and tracks the number of managers
-    managerPayroll = managerPayroll + sal;
-    totalManagers++;
   }
 
   /**
-  * Getter method for Manager's payroll
-  * @return Manager's payroll
+  * Getter method for manager's current project
+  * @return manager's current project
   */
-  public static int getManagerPayroll(){
-    return managerPayroll;
-  }
-
-  /**
-  * Getter method for the number of managers
-  * @return total number of managers
-  */
-  public static int getTotalManagers(){
-    return totalManagers;
+  public String getCurrentProject(){
+    return currentProject;
   }
 
   /**
