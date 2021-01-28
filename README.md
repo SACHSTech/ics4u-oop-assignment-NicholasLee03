@@ -1,9 +1,14 @@
-[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=3826336&assignment_repo_type=AssignmentRepo)
 # ICS4U OOP Assignment
 
 [*see instructions for details*](Instructions.md)
 
 *Insert Class Diagram here*  
 
+![Image of Class Diagram](https://github.com/SACHSTech/ics4u-oop-assignment-NicholasLee03/blob/main/OOPClassDiagram.png)
+
+
 ## Summary
 *Include a brief summary that describes your system that your are modelling*
+
+The system that is being modelled is the hierarchy of the staff at a software development company. The user is an individual who is working for the Human Resources Department and is using a Human Resources Information System that provides information about the CEO, Software Development Managers, and Software Developers. The program provides information such as the employee’s first name, last name, home address, medical information, and salary. Depending on the position of the employee such as CEO vs a Developer, there is other information that is provided. The user will go through each level of the hierarchy from CEO to the Developers and at the end, a Human Resources Report is provided that provides information about the number of employees and payroll. 
+
